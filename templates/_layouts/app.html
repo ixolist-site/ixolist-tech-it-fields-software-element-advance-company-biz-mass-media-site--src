@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <script src="{{baseurl}}/assets/scripts/app/script.js"></script>
+  <head>
+    <title>
+      {{ page.title }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{baseurl}}/assets/styles/css/style.css" rel="stylesheet">
+    <!-- Include fonts -->
+    {% include fonts.html %}
+    <!-- Include animations -->
+    {% include animations.html %}
+  </head>
+  <body class="apps-body">
+    {% include multilang-buttons.html %}
+    <div class="container-app">
+      <div class="container__left-side" style="justify-content: start;">
+        <div class="left-side__block">
+          <div class="container__title animate__animated animate__fadeInDown">
+            {{ page.title }}
+          </div>
+          <div class="container__subtitle animate__animated animate__fadeInDown">
+            {{ page.description }}
+          </div>
+        </div>
+      </div>
+      <div class="container__right-side">
+        <div class="apps-body__detail-description animate__animated animate__fadeInRight">
+          {{ page.detail-description}}
+          <a style="text-decoration: none; width: 100%;" href="diagrams">
+            <button class="container__btn" >
+              {{ page.diagrams }}
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

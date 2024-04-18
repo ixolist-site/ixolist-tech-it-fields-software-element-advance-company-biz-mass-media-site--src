@@ -1,0 +1,13 @@
+<div class="multilang-buttons animate__animated animate__fadeIn">
+  {% if page.lang == "en" %}
+    <a href="{{page.url}}" class="multilang-buttons--selected">EN</a>
+  {% else %}
+    <a href="{{page.url}}">EN</a>
+  {% endif %}
+  <div class="separator"></div>
+  {% if page.lang == "ru" %}
+    <a href="/ru{{page.url}}" class="multilang-buttons--selected">РУ</a>
+  {% else %}
+    <a href="/ru{{page.url}}">РУ</a>
+  {% endif %}
+</div>

@@ -1,0 +1,48 @@
+title: IXOLIST Mass Media
+email:
+description: IXOLIST Mass Media website
+baseurl: "/"
+url: ""
+github_username:  Saifas Jekyll
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-polyglot
+
+# Localization
+languages: ["en", "ru"]
+default_lang: "en"
+exclude_from_localization: ["_includes", "assets"]
+parallel_localization: true
+
+contents_root_path: /contents/
+contents_pages_path: /contents/pages/
+
+source: ./
+
+destination: ./_site/
+
+layouts_dir: ./templates/_layouts/
+
+usebasinUrl: https://usebasin.com/f/067bdb6011d2
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
