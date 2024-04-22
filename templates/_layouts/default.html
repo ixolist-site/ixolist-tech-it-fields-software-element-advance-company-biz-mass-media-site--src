@@ -13,6 +13,17 @@
     {% include animations.html %}
   </head>
   <body>
-    {% include multilang-buttons.html %}
+    <div class="header">
+      <div class="header-logo">
+        {% if page.lang == "en" %}
+          <a href="/">IXOlist Mass Media</a>
+        {% else %}
+          <a href="/ru">IXOlist СМИ</a>
+        {% endif %}
+      </div>
+      <!-- {% include breadcrumbs.html %} -->
+      {% include multilang-buttons.html %}
+    </div>
+    {{ content }}
   </body>
 </html>

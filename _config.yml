@@ -1,6 +1,6 @@
-title: IXOLIST Mass Media
+title: IXOlist Mass Media
 email:
-description: IXOLIST Mass Media website
+description: IXOlist Mass Media website
 baseurl: "/"
 url: ""
 github_username:  Saifas Jekyll
@@ -15,6 +15,8 @@ languages: ["en", "ru"]
 default_lang: "en"
 exclude_from_localization: ["_includes", "assets"]
 parallel_localization: true
+
+permalink: /:year-:month-:day-:title.html
 
 contents_root_path: /contents/
 contents_pages_path: /contents/pages/

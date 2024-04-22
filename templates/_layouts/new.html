@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <script src="{{baseurl}}/assets/scripts/home/script.js"></script>
+  <head>
+    <title>
+      {{ page.new-title }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{baseurl}}/assets/styles/css/style.css" rel="stylesheet">
+    <!-- Include fonts -->
+    {% include fonts.html %}
+    <!-- Include animations -->
+    {% include animations.html %}
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-logo">
+        {% if page.lang == "en" %}
+          <a href="/">IXOlist Mass Media</a>
+        {% else %}
+          <a href="/ru">IXOlist СМИ</a>
+        {% endif %}
+      </div>
+      <!-- {% include breadcrumbs.html %} -->
+      <!-- {% include multilang-buttons.html %} -->
+    </div>
+    <div class="new__title">{{page.new-title}}</div>
+    <div class="new__text">{{page.new-text}}</div>
+    <div class="new__sources">
+      {% if page.lang == "en" %}
+        Sources:
+        {% for source in page.sources %}
+          <a href="{{source.link}}" target="_blank">{{source.name}}</a>
+        {% endfor %}
+      {% else %}
+        Источники:
+        {% for source in page.sources %}
+          <a href="{{source.link}}" target="_blank">{{source.name}}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="new__date">{{page.publish-date}}</div>
+  </body>
+</html>
