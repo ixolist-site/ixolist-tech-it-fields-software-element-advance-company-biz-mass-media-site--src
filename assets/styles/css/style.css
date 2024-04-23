@@ -63,22 +63,29 @@ body {
   max-height: 80px;
 }
 
-.header-logo {
+.header-logo > a {
   color: #fff;
   font-size: 38px;
   font-weight: 700;
   cursor: pointer;
   transition: .3s;
   padding: 6px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .header-logo:hover > a {
   color: #1976D2;
   transition: .3s;
+}
+
+.header-logo:hover > a > span {
+  color: #1976D2;
+  transition: .3s;
   border: 7px solid #1976D2;
 }
 
-.header-logo > a {
+.header-logo > a > span {
   color: #fff;
   text-decoration: none;
   transition: .3s;
