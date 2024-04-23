@@ -174,14 +174,12 @@ body {
 
   .header-logo {
     color: #fff;
-    font-size: 18px !important;
-    font-weight: 700;
     cursor: pointer;
     transition: .3s;
     padding: 6px;
   }
   
-  .header-logo:hover > a {
+  .header-logo:hover > a > span {
     color: #1976D2;
     transition: .3s;
     border: 3px solid #1976D2;
@@ -191,8 +189,9 @@ body {
     color: #fff;
     text-decoration: none;
     transition: .3s;
-    border: 3px solid #fff;
     padding: 6px;
+    font-size: 18px !important;
+    font-weight: 700;
   }
 
   #breadcrumbs {
@@ -223,14 +222,12 @@ body {
 
   .header-logo {
     color: #fff;
-    font-size: 20px !important;
-    font-weight: 700;
     cursor: pointer;
     transition: .3s;
     padding: 6px;
   }
   
-  .header-logo:hover > a {
+  .header-logo:hover > a > span {
     color: #1976D2;
     transition: .3s;
     border: 3px solid #1976D2;
@@ -240,8 +237,9 @@ body {
     color: #fff;
     text-decoration: none;
     transition: .3s;
-    border: 3px solid #fff;
     padding: 6px;
+    font-size: 20px !important;
+    font-weight: 700;
   }
 
   #breadcrumbs {
