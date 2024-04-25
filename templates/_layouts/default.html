@@ -6,30 +6,38 @@
       {{ page.title }}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{baseurl}}/assets/styles/css/style.css" rel="stylesheet">
+    <link href="{{baseurl}}/assets/styles/css/new-styles.css" rel="stylesheet">
     <!-- Include fonts -->
     {% include fonts.html %}
     <!-- Include animations -->
     {% include animations.html %}
+    {% include bootstrap.html %}
   </head>
-  <body>
-    <div class="header">
-      <div class="header-logo">
-        {% if page.lang == "en" %}
-          <a href="/">
-            <span>IXOlist</span>
-            Mass Media
-          </a>
-        {% else %}
-          <a href="/ru">
-            <span>IXOlist</span>
-            СМИ
-          </a>
-        {% endif %}
+  <div class="header sticky-top shadow-lg" style="
+    background: #1976D2;
+  ">
+    <div class="container d-flex">
+      <div class="col">
+        <div class="header-logo d-flex fs-5 p-3">
+          {% if page.lang == "en" %}
+            <a href="{{site.marketing_site_url}}" target="_blank">IXOlist</a>
+            <div class="sub-logo">
+              <a href="/">Mass Media</a>
+            </div>
+          {% else %}
+            <a href="{{site.marketing_site_url}}" target="_blank">IXOlist</a>
+            <div class="sub-logo">
+              <a href="/{{page.lang}}">СМИ</a>
+            </div>
+          {% endif %}
+        </div>
       </div>
-      <!-- {% include breadcrumbs.html %} -->
       {% include multilang-buttons.html %}
     </div>
-    {{ content }}
+  </div>
+  <body>
+    <div class="container">
+      {{ content }}
+    </div>
   </body>
 </html>

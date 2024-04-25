@@ -5,7 +5,7 @@ permalink: /
 lang: en
 page_id: home
 ---
-<div class="news-block">
+<div class="news-block p-3">
   {% for new in site.posts %}
     {% if new.lang == page.lang %}
       {% include new-card.html new=new %}
