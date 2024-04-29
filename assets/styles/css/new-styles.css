@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif !important;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -26,7 +25,7 @@ html, body {
 }
 
 .multilang-buttons--selected {
-  opacity: 0.3 !important;
+  border-bottom: 2px solid #fff !important;
 }
 
 .multilang-buttons > a {
