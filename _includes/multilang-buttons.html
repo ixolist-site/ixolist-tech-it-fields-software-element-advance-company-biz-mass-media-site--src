@@ -1,13 +1,19 @@
-<div class="d-flex fs-5 p-2 align-items-center justify-content-end multilang-buttons">
-  {% if page.lang == "en" %}
-    <a href="{{page.url}}" class="multilang-buttons--selected">EN</a>
-  {% else %}
-    <a href="{{page.url}}">EN</a>
-  {% endif %}
-  <div class="separator"></div>
-  {% if page.lang == "ru" %}
-    <a href="/ru{{page.url}}" class="multilang-buttons--selected">РУ</a>
-  {% else %}
-    <a href="/ru{{page.url}}">РУ</a>
-  {% endif %}
+<div class="language-selector">
+  <div class="language-icon p-3">
+    <img src="{{baseUrl}}/assets/graphics/images/translate.svg" style="width: 32px;" alt="Language Icon">
+    <div class="language-options">
+      <ul>
+        {% if page.lang == "en" %}
+          <li><a href="{{page.url}}" class="multilang-buttons--selected">English</a></li>
+        {% else %}
+          <li><a href="{{page.url}}">English</a></li>
+        {% endif %}
+        {% if page.lang == "ru" %}
+          <li><a href="/ru{{page.url}}" class="multilang-buttons--selected">Русский</a></li>
+        {% else %}
+          <li><a href="/ru{{page.url}}">Русский</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
 </div>
