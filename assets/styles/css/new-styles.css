@@ -166,3 +166,8 @@ html, body {
 .language-options ul li a:hover {
   background-color: #f0f0f0;
 }
+
+.category-title {
+  color: #1976D2;
+  font-weight: 500 !important;
+}

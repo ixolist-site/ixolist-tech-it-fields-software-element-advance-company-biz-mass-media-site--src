@@ -62,11 +62,23 @@
               {% for source in page.sources %}
                 <a href="{{source.link}}" target="_blank">{{source.name}}</a>
               {% endfor %}
+              <div>
+              Categories:
+              {% for category in page.categories %}
+                <a href="/categories/#{{category}}" target="_blank">{{category}}</a>
+              {% endfor %}
+              </div>
             {% else %}
               Источники:
               {% for source in page.sources %}
                 <a href="{{source.link}}" target="_blank">{{source.name}}</a>
               {% endfor %}
+              <div>
+              Категории:
+              {% for category in page.categories %}
+                <a href="/ru/categories/#{{category}}" target="_blank">{{category}}</a>
+              {% endfor %}
+              </div>
             {% endif %}
           </div>
           <div class="new__date">{{page.publish-date}}</div>
