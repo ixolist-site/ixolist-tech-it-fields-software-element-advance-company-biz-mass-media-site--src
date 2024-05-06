@@ -40,49 +40,62 @@
     </div>
   <body>
     <div class="container p-4">
-      <div class="col text-primary d-flex mt-4 flex-column align-items-start">
-        <h2 class="fw-bold display-3 animate__animated animate__fadeInDown" style="
-          color: #1976D2;"
-        >
-          {{ page.new-title }}
-        </h2>
-        <h3 class="fw-light fs-4 text-justify mt-4 animate__animated animate__fadeInRight" style="
+      <div class="col text-primary d-flex flex-column align-items-start">
+          <h2 class="fw-bold display-4 animate__animated animate__fadeInDown" style="
+            color: #1976D2;"
+          >
+            {{ page.new-title }}
+          </h2>
+        <div class="pt-3 px-3 pb-1 mt-4 animate__animated animate__fadeInRight" style="border: 2px solid #1976D2;">
+          <h3 class="fw-light fs-4 text-justify animate__animated animate__fadeInRight" style="
+            color: #1976D2;
+            line-height: 46px;"
+          >
+            {{ page.new-text }}
+          </h3>
+          <div class="fs-5 d-flex align-items-center animate__animated animate__fadeInRight mt-4">
+            <div class="new-date__separator"></div>
+            <div class="new-date__value fw-light">{{ page.publish-date }}</div>
+          </div>
+          <div class="fw-light fs-4 text-justify animate__animated animate__fadeInRight" style="
+            color: #1976D2;
+            line-height: 46px;"
+          >
+            <div class="new__sources fs-5 mt-4">
+              {% if page.lang == "en" %}
+                Sources:
+                {% for source in page.sources %}
+                  <a href="{{source.link}}" target="_blank">{{source.name}}</a>
+                {% endfor %}
+              {% else %}
+                Источники:
+                {% for source in page.sources %}
+                  <a href="{{source.link}}" target="_blank">{{source.name}}</a>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="fw-light fs-4 text-justify animate__animated animate__fadeInRight" style="
           color: #1976D2;
           line-height: 46px;"
         >
-          {{ page.new-text }}
-        </h3>
-        <h3 class="fw-light fs-4 text-justify mt-4 animate__animated animate__fadeInRight" style="
-          color: #1976D2;
-          line-height: 46px;"
-        >
-          <div class="new__sources">
+          <div class="new__tags fs-5 mt-4">
             {% if page.lang == "en" %}
-              Sources:
-              {% for source in page.sources %}
-                <a href="{{source.link}}" target="_blank">{{source.name}}</a>
-              {% endfor %}
-              <div>
-              Categories:
               {% for category in page.categories %}
-                <a href="/categories/#{{category}}" target="_blank">{{category}}</a>
+                <a href="/categories/#{{category}}" target="_blank">
+                  <div style="background: #1976D2;" class="badge badge-pill badge-primary" >{{category}}</div>
+                </a>
               {% endfor %}
-              </div>
             {% else %}
-              Источники:
-              {% for source in page.sources %}
-                <a href="{{source.link}}" target="_blank">{{source.name}}</a>
-              {% endfor %}
-              <div>
-              Категории:
               {% for category in page.categories %}
-                <a href="/ru/categories/#{{category}}" target="_blank">{{category}}</a>
+                <a href="./categories/#{{category}}" target="_blank">
+                  <div style="background: #1976D2;" class="badge badge-pill badge-primary" >{{category}}</div>
+                </a>
               {% endfor %}
-              </div>
             {% endif %}
           </div>
-          <div class="new__date">{{page.publish-date}}</div>
-        </h3>
+        </div>
       </div>
     </div>
   </body>

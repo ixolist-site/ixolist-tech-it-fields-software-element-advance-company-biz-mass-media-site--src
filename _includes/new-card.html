@@ -1,4 +1,7 @@
-<a href="{{ new.url }}" class="news-block__card p-2 w-100 fs-4 mb-3">
+<a href="{{ new.url }}" class="news-block__card p-2 w-100 fs-3 mb-3">
   <div>{{ new.new-title }}</div>
-  <div style="margin-top: 20px;">{{ new.publish-date }}</div>
+  <div style="margin-top: 20px;" class="fs-5 d-flex align-items-center">
+    <div class="new-date__separator"></div>
+    <div class="new-date__value fw-light">{{ new.publish-date }}</div>
+  </div>
 </a>

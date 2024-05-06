@@ -171,3 +171,27 @@ html, body {
   color: #1976D2;
   font-weight: 500 !important;
 }
+
+.new-date__separator {
+  height: 16px;
+  width: 5px;
+  background: #1976D2;
+  margin-right: 6px;
+}
+
+.new-date__value {
+  color: #1976D2 !important;
+}
+
+.new__tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.new__tags > a{
+  display: flex;
+  height: auto;
+  text-decoration: none !important;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
