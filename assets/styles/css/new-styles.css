@@ -195,3 +195,33 @@ html, body {
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+.tags__tag-link > a{
+  text-decoration: none;
+  color: #1976D2;
+}
+
+.tags__tag-link:after {
+  display: block;
+  position: relative;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1976D2;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+
+.tags__tag-link:hover:after,
+.tags__tag-link:focus:after {
+  width: 100%;
+}
+
+.tags-title:hover {
+  opacity: .6;
+  transition: .3s;
+}
+
+.tags-title {
+  transition: .3s;
+}

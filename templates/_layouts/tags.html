@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <script src="{{baseurl}}/assets/scripts/home/script.js"></script>
+  <head>
+    <title>
+      {{ page.title }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We ensure that clients participate in promising cryptocurrency projects, and also create a bridge between cryptocurrencies and business development for greater efficiency and effectiveness.">
+    <meta name="keywords" content="IXOList, cryptocurrencies, ICO, blockchain, news, analytics, reviews, investments, news. IXOList, криптовалюты, ICO, блокчейн, аналитика, инвестиции, новости">
+    <meta name="author" content="IXOList">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link href="{{baseurl}}/assets/styles/css/new-styles.css" rel="stylesheet">
+    <!-- Include animations -->
+    {% include animations.html %}
+    {% include bootstrap.html %}
+  </head>
+  <div class="header sticky-top shadow-lg" style="
+    background: #1976D2;
+  ">
+    <div class="container d-flex">
+      <div class="col">
+        <div class="header-logo d-flex fs-5 p-3">
+          {% if page.lang == "en" %}
+            <a href="{{site.marketing_site_url}}" target="_blank">IXOlist</a>
+            <div class="sub-logo">
+              <a href="/">Mass Media</a>
+            </div>
+          {% else %}
+            <a href="{{site.marketing_site_url}}" target="_blank">IXOlist</a>
+            <div class="sub-logo">
+              <a href="/{{page.lang}}">СМИ</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% include multilang-buttons.html %}
+    </div>
+  </div>
+  <body>
+    <div class="container p-4" style="color: #1976D2;">
+      {% if page.lang == "en" %}
+        <h1 class="display-4 fw-bold mb-3">Tags</h1>
+      {% else %}
+        <h1 class="display-4 fw-bold mb-3">Теги</h1>
+      {% endif %}
+      {% for post in page.posts %}
+        {% include new-card.html new=post %}
+      {% endfor %}
+      <div id="tag-cloud">
+        <div class="d-flex flex-wrap">
+          <ul>
+          {% for tag_hash in site.tags %}
+            {% assign tag_info = tag_hash | first %}
+            {% assign tag_name = tag_info.name %}
+            {% assign tag_lang = tag_info.lang %}
+            {% if tag_lang == page.lang %}
+              <li class="tags__tag-link mb-1">
+                <a href="{{ tag_name }}">
+                  <h4 class="fs-4" id="{{ tag_name | slugify }}"> {{ tag_name }}</h4>
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

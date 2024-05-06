@@ -82,15 +82,17 @@
         >
           <div class="new__tags fs-5 mt-4">
             {% if page.lang == "en" %}
-              {% for category in page.categories %}
-                <a href="/categories/#{{category}}" target="_blank">
-                  <div style="background: #1976D2;" class="badge badge-pill badge-primary" >{{category}}</div>
+              {% for tag_hash in page.tags %}
+                {% assign tag_name = tag_hash["name"] %}
+                <a href="/tags/{{tag_name}}" target="_blank">
+                  <div style="background: #1976D2;" class="badge badge-pill badge-primary" >{{tag_name}}</div>
                 </a>
               {% endfor %}
             {% else %}
-              {% for category in page.categories %}
-                <a href="./categories/#{{category}}" target="_blank">
-                  <div style="background: #1976D2;" class="badge badge-pill badge-primary" >{{category}}</div>
+               {% for tag_hash in page.tags %}
+                {% assign tag_name = tag_hash["name"] %}
+                <a href="./tags/{{tag_name}}" target="_blank">
+                  <div style="background: #1976D2;" class="badge badge-pill badge-primary" >{{tag_name}}</div>
                 </a>
               {% endfor %}
             {% endif %}

@@ -1,14 +1,22 @@
-<div id="breadcrumbs">
+<div id="breadcrumbs" style="max-width: calc(100vw - 180px);">
   <div style="display: flex; align-items: center; margin-left: 10px;" id="breadcrumbs">
     {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
     {% for crumb in crumbs offset: 1 %}
+      {% if forloop.index > 2 %}
+        {% break %}
+      {% endif %}
       {% if forloop.last %}
-        {{ page.breadcrumbs-title }}
+        {% if page.breadcrumbs-title %}
+          <div class="text-nowrap">{{ page.breadcrumbs-title }}</div>
+        {% endif %}
       {% else %}
         <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
-        {% unless forloop.last %} <div style="margin: 0 6px;">></div> {% endunless %}
+        {% unless forloop.last %}
+          {% unless forloop.index > 1 %}
+            <div style="margin: 0 6px;">></div>
+          {% endunless %}
+        {% endunless %}
       {% endif %}
     {% endfor %}
-    {{ crumbs.last | replace:'-',' ' | remove:'.html' | capitalize }}
   </div>
 </div>
