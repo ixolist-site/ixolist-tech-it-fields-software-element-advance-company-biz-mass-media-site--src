@@ -225,3 +225,84 @@ html, body {
 .tags-title {
   transition: .3s;
 }
+
+.tags-container-en--desktop {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.tags-container-en--mobile {
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.tags-container-ru--desktop {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.tags-container-ru--mobile {
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.tag {
+  color: #1976D2;
+  text-decoration: none;
+  font-size: 8px;
+  font-weight: lighter;
+  transition: color 0.3s ease;
+  margin: 4px;
+}
+
+.tag:after {
+  display: block;
+  position: relative;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1976D2;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+
+.tag:hover:after,
+.tag:focus:after {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) { 
+  .tags-container-en--mobile {
+    display: flex;
+  }
+  
+  .tags-container-en--desktop {
+    display: none;
+  }
+
+  .tags-container-ru--mobile {
+    display: flex;
+  }
+  
+  .tags-container-ru--desktop {
+    display: none;
+  }
+}
+
+#viewSelector {
+  font-size: 24px;
+  font-weight: 500;
+  color: #1976D2;
+}

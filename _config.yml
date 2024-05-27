@@ -31,6 +31,8 @@ usebasinUrl: https://usebasin.com/f/067bdb6011d2
 
 marketing_site_url: https://ixolist.netlify.app/
 
+massMediaUrl: https://ixolist-mass-media.netlify.app
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

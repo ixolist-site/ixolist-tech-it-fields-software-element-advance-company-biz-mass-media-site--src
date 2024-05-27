@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  <script src="{{baseurl}}/assets/scripts/home/script.js"></script>
+  <script src="{{baseurl}}/assets/scripts/tags/script.js"></script>
   <head>
     <title>
       {{ page.title }}
@@ -43,14 +43,32 @@
   <body>
     <div class="container p-4" style="color: #1976D2;">
       {% if page.lang == "en" %}
-        <h1 class="display-4 fw-bold mb-3">Tags</h1>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h1 class="display-4 fw-bold">Tags</h1>
+          <div class="selector-container">
+              <label class="fw-bold fs-4" for="viewSelector">Select View:</label>
+              <select id="viewSelector">
+                  <option class="fs-4" value="list">List</option>
+                  <option class="fs-4" value="cloud">Cloud</option>
+              </select>
+          </div>
+        </div>
       {% else %}
-        <h1 class="display-4 fw-bold mb-3">Теги</h1>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h1 class="display-4 fw-bold">Теги</h1>
+          <div class="selector-container">
+              <label class="fw-bold fs-4" for="viewSelector">Выбрать вид:</label>
+              <select id="viewSelector">
+                  <option class="fs-4" value="list">Лист</option>
+                  <option class="fs-4" value="cloud">Облако</option>
+              </select>
+          </div>
+        </div>
       {% endif %}
       {% for post in page.posts %}
         {% include new-card.html new=post %}
       {% endfor %}
-      <div id="tag-cloud">
+      <div id="tag-cloud-list">
         <div class="d-flex flex-wrap">
           <ul>
           {% for tag_hash in site.tags %}
@@ -67,6 +85,27 @@
           {% endfor %}
           </ul>
         </div>
+      </div>
+      <div id="tag-cloud-cloud">
+        <div class="
+          container
+          d-flex
+          flex-row
+          justify-content-center
+          align-items-center
+          animate__animated
+          animate__fadeInLeft
+          p-4
+        ">
+          {% if page.lang == "en" %}
+            {% include cloud-tags/cloud-tags-en-desktop.html %}
+            {% include cloud-tags/cloud-tags-en-mobile.html %}
+          {% else %}
+            {% include cloud-tags/cloud-tags-ru-desktop.html %}
+            {% include cloud-tags/cloud-tags-ru-mobile.html %}
+          {% endif %}
+        </div>
+      </div>
       </div>
     </div>
   </body>
