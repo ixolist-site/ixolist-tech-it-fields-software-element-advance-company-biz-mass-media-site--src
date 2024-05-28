@@ -1,7 +1,5 @@
 ---
-layout: tags
-title: Теги
 permalink: /tags/
 lang: ru
-page_id: tags
 ---
+<script src="{{baseurl}}/assets/scripts/tags/redirect-to-tags-cloud.js"></script>

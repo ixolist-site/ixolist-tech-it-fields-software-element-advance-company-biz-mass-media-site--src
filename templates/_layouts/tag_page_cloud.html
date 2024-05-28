@@ -37,7 +37,7 @@
           {% endif %}
         </div>
       </div>
-      
+     
       <div class="d-flex align-items-center">
         {% if page.lang == "en" %}
           <div class="sub-logo fs-5">
@@ -59,8 +59,22 @@
     </div>
   </div>
   <body>
-    <div class="container">
-      {{ content }}
+    <div class="container p-4" style="color: #1976D2;">
+      {% if page.lang == "en" %}
+        <a class="tags-title" href="/tags-cloud/" style="text-decoration: none; color: #1976D2;"><h1 class="display-4 fw-bold mb-3">Tags</h1></a>
+        <h3 class="fs-2 mb-4">{{page.tag}}</h3>
+      {% else %}
+      <a class="tags-title" href="/{{page.lang}}/tags-cloud/" style="text-decoration: none; color: #1976D2;"><h1 class="display-4 fw-bold mb-3">Теги</h1></a>
+      <h3 class="fs-2 mb-4">{{page.tag}}</h3>
+      {% endif %}
+      {% assign tag_name = page.tag %}
+      {% for tag in site.tags %}
+        {% if tag[0].name == tag_name %}
+          {% for post in tag[1] %}
+            {% include new-card.html new=post %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
     </div>
   </body>
 </html>

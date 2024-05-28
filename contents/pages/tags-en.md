@@ -1,7 +1,5 @@
 ---
-layout: tags
-title: Tags
 permalink: /tags/
 lang: en
-page_id: tags
 ---
+<script src="{{baseurl}}/assets/scripts/tags/redirect-to-tags-cloud.js"></script>

@@ -69,6 +69,19 @@ html, body {
   padding: 6px;
 }
 
+.sub-logo > a:hover {
+  opacity: .3;
+  transition: .3s;
+}
+
+.sub-logo > a {
+  color: #fff;
+  text-decoration: none;
+  transition: .3s;
+  padding: 6px;
+  white-space: nowrap;
+}
+
 .header-logo > .sub-logo > a {
   color: #fff;
   text-decoration: none;
