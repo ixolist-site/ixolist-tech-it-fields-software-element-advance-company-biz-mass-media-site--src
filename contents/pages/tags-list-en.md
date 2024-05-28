@@ -1,6 +1,6 @@
 ---
 layout: tags
-title: Tags
+title: IXOlist Mass Media - Tags
 permalink: /tags-list/
 lang: en
 page_id: tags-list
