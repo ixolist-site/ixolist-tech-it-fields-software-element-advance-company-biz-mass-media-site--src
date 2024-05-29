@@ -27,18 +27,38 @@
           {% if page.lang == "en" %}
             <a href="{{site.marketing_site_url}}" target="_blank">IXOlist</a>
             <div class="sub-logo">
-              <a href="/">Mass Media</a>
+              <a href="/tags-cloud/">Mass Media</a>
             </div>
           {% else %}
             <a href="{{site.marketing_site_url}}" target="_blank">IXOlist</a>
             <div class="sub-logo">
-              <a href="/{{page.lang}}">СМИ</a>
+              <a href="/{{page.lang}}/tags-cloud/">СМИ</a>
             </div>
           {% endif %}
+          <div class="dropdown">
+            <img width="36px;" class="dropbtn" src="{{baseurl}}/assets/graphics/images/dots.png"></img>
+            <div class="dropdown-content">
+              {% if page.lang == "en" %}
+                <div class="fs-5">
+                  <a href="/tags-cloud">Tags</a>
+                </div>
+                <div class="fs-5">
+                  <a href="/news">News</a>
+                </div>
+              {% else %}
+                <div class="fs-5">
+                  <a href="/ru/tags-cloud">Теги</a>
+                </div>
+                <div class="fs-5">
+                  <a href="/ru/news">Новости</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
         </div>
       </div>
       <div class="d-flex align-items-center">
-        {% if page.lang == "en" %}
+        <!-- {% if page.lang == "en" %}
           <div class="sub-logo fs-5">
             <a href="/tags-cloud">Tags</a>
           </div>
@@ -52,7 +72,7 @@
           <div class="sub-logo fs-5">
             <a href="/ru/news">Новости</a>
           </div>
-        {% endif %}
+        {% endif %} -->
         {% include multilang-buttons.html %}
       </div>
     </div>
@@ -64,26 +84,26 @@
           <h1 class="display-4 fw-bold">Tags</h1>
           <div class="d-flex align-items-center">
             {% if page.cloud %}
-            <span style="cursor: pointer;" class="fs-3 fw-bold text-decoration-underline">
+            <span title="Cloud" style="cursor: pointer;" class="fs-3 fw-bold">
               <a style="text-decoration: none; color: #1976d2;" href="/tags-cloud">
-                Cloud
+                <img width="36px;" src="{{baseurl}}/assets/graphics/images/cloud-filled.png"></img>
               </a>
               </span>
-            <div class="mx-2" style="display: block; height: 20px; width: 3px; background: #1976d2;"></div>
-            <span style="cursor: pointer;" class="fs-3 fw-bold">
+            <div class="mx-3" style="display: block; height: 32px; width: 2px; background: #1976d2;"></div>
+            <span title="List" style="cursor: pointer;" class="fs-3 fw-bold">
               <a style="text-decoration: none; color: #1976d2;" href="/tags-list">
-                List
+                <img width="36px;" src="{{baseurl}}/assets/graphics/images/list.png"></img>
               </a></span>
             {% else if %}
-            <span style="cursor: pointer;" class="fs-3 fw-bold ">
+            <span title="Cloud" style="cursor: pointer;" class="fs-3 fw-bold ">
               <a style="text-decoration: none; color: #1976d2;" href="/tags-cloud">
-                Cloud
+                <img width="36px;" src="{{baseurl}}/assets/graphics/images/cloud.png"></img>
               </a>
             </span>
-            <div class="mx-2" style="display: block; height: 20px; width: 3px; background: #1976d2;"></div>
-            <span style="cursor: pointer;" class="fs-3 fw-bold text-decoration-underline">
+            <div class="mx-3" style="display: block; height: 32px; width: 2px; background: #1976d2;"></div>
+            <span title="List" style="cursor: pointer;" class="fs-3 fw-bold">
               <a style="text-decoration: none; color: #1976d2;" href="/tags-list">
-                List
+                <img width="36px;" src="{{baseurl}}/assets/graphics/images/list-filled.png"></img>
               </a></span></span>
             {% endif %}
           </div>
@@ -93,29 +113,27 @@
           <h1 class="display-4 fw-bold">Теги</h1>
           <div class="d-flex align-items-center">
             {% if page.cloud %}
-            <span style="cursor: pointer;" class="fs-3 fw-bold text-decoration-underline">
+            <span title="Облако" style="cursor: pointer;" class="fs-3 fw-bold">
               <a style="text-decoration: none; color: #1976d2;" href="/ru/tags-cloud">
-                Облако
+                <img width="36px;" src="{{baseurl}}/assets/graphics/images/cloud-filled.png"></img>
               </a>
-            </span>
-            <div class="mx-2" style="display: block; height: 20px; width: 3px; background: #1976d2;"></div>
-            <span style="cursor: pointer;" class="fs-3 fw-bold">
+              </span>
+            <div class="mx-3" style="display: block; height: 32px; width: 2px; background: #1976d2;"></div>
+            <span title="Список" style="cursor: pointer;" class="fs-3 fw-bold">
               <a style="text-decoration: none; color: #1976d2;" href="/ru/tags-list">
-                Список
-              </a>
-            </span>
+                <img width="36px;" src="{{baseurl}}/assets/graphics/images/list.png"></img>
+              </a></span>
             {% else if %}
-            <span style="cursor: pointer;" class="fs-3 fw-bold ">
+            <span title="Облако" style="cursor: pointer;" class="fs-3 fw-bold ">
               <a style="text-decoration: none; color: #1976d2;" href="/ru/tags-cloud">
-                Облако
+                <img width="36px;" src="{{baseurl}}/assets/graphics/images/cloud.png"></img>
               </a>
             </span>
-            <div class="mx-2" style="display: block; height: 20px; width: 3px; background: #1976d2;"></div>
-            <span style="cursor: pointer;" class="fs-3 fw-bold text-decoration-underline">
+            <div class="mx-3" style="display: block; height: 32px; width: 2px; background: #1976d2;"></div>
+            <span title="Список" style="cursor: pointer;" class="fs-3 fw-bold">
               <a style="text-decoration: none; color: #1976d2;" href="/ru/tags-list">
-                Список
-              </a>
-            </span>
+                <img width="36px;" src="{{baseurl}}/assets/graphics/images/list-filled.png"></img>
+              </a></span></span>
             {% endif %}
           </div>
         </div>
@@ -136,11 +154,11 @@
           p-4
         ">
           {% if page.lang == "en" %}
-            {% include cloud-tags/cloud-tags-en-desktop.html tagsPath="/tags-cloud/" %}
-            {% include cloud-tags/cloud-tags-en-mobile.html tagsPath="/tags-cloud/" %}
+            {% include cloud-tags/cloud-tags-en-desktop.html tagsPath="/tags/" %}
+            {% include cloud-tags/cloud-tags-en-mobile.html tagsPath="/tags/" %}
           {% else %}
-            {% include cloud-tags/cloud-tags-ru-desktop.html tagsPath="/tags-cloud/"%}
-            {% include cloud-tags/cloud-tags-ru-mobile.html tagsPath="/tags-cloud/"%}
+            {% include cloud-tags/cloud-tags-ru-desktop.html tagsPath="/tags/"%}
+            {% include cloud-tags/cloud-tags-ru-mobile.html tagsPath="/tags/"%}
           {% endif %}
         </div>
       </div>
@@ -154,7 +172,7 @@
               {% assign tag_lang = tag_info.lang %}
               {% if tag_lang == page.lang %}
                 <li class="tags__tag-link mb-1">
-                  <a href="{{ tag_name }}">
+                  <a href="/tags/{{ tag_name }}">
                     <h4 class="fs-4" id="{{ tag_name | slugify }}"> {{ tag_name }}</h4>
                   </a>
                 </li>

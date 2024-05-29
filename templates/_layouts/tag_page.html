@@ -27,44 +27,45 @@
           {% if page.lang == "en" %}
             <a href="{{site.marketing_site_url}}" target="_blank">IXOlist</a>
             <div class="sub-logo">
-              <a href="/">Mass Media</a>
+              <a href="/tags-cloud/">Mass Media</a>
             </div>
           {% else %}
             <a href="{{site.marketing_site_url}}" target="_blank">IXOlist</a>
             <div class="sub-logo">
-              <a href="/{{page.lang}}">СМИ</a>
+              <a href="/{{page.lang}}/tags-cloud/">СМИ</a>
             </div>
           {% endif %}
+          <div class="dropdown">
+            <img width="36px;" class="dropbtn" src="{{baseurl}}/assets/graphics/images/dots.png"></img>
+            <div class="dropdown-content">
+              {% if page.lang == "en" %}
+                <div class="fs-5">
+                  <a href="/tags-cloud">Tags</a>
+                </div>
+                <div class="fs-5">
+                  <a href="/news">News</a>
+                </div>
+              {% else %}
+                <div class="fs-5">
+                  <a href="/ru/tags-cloud">Теги</a>
+                </div>
+                <div class="fs-5">
+                  <a href="/ru/news">Новости</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
         </div>
-      </div>
-      
-      <div class="d-flex align-items-center">
-        {% if page.lang == "en" %}
-          <div class="sub-logo fs-5">
-            <a href="/tags-cloud">Tags</a>
-          </div>
-          <div class="sub-logo fs-5">
-            <a href="/news">News</a>
-          </div>
-        {% else %}
-          <div class="sub-logo fs-5">
-            <a href="/ru/tags-cloud">Теги</a>
-          </div>
-          <div class="sub-logo fs-5">
-            <a href="/ru/news">Новости</a>
-          </div>
-        {% endif %}
-        {% include multilang-buttons.html %}
       </div>
     </div>
   </div>
   <body>
     <div class="container p-4" style="color: #1976D2;">
       {% if page.lang == "en" %}
-        <a class="tags-title" href="/tags-list/" style="text-decoration: none; color: #1976D2;"><h1 class="display-4 fw-bold mb-3">Tags</h1></a>
+        <a class="tags-title" href="/tags-cloud/" style="text-decoration: none; color: #1976D2;"><h1 class="display-4 fw-bold mb-3">Tags</h1></a>
         <h3 class="fs-2 mb-4">{{page.tag}}</h3>
       {% else %}
-      <a class="tags-title" href="/{{page.lang}}/tags-list/" style="text-decoration: none; color: #1976D2;"><h1 class="display-4 fw-bold mb-3">Теги</h1></a>
+      <a class="tags-title" href="/{{page.lang}}/tags-cloud/" style="text-decoration: none; color: #1976D2;"><h1 class="display-4 fw-bold mb-3">Теги</h1></a>
       <h3 class="fs-2 mb-4">{{page.tag}}</h3>
       {% endif %}
       {% assign tag_name = page.tag %}
