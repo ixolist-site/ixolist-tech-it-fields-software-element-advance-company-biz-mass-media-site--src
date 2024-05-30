@@ -1,7 +1,15 @@
-<a href="{{ include.new.url }}" class="news-block__card p-2 w-100 fs-3 mb-3">
-  <div>{{ include.new.new-title }}</div>
-  <div style="margin-top: 20px;" class="fs-5 d-flex align-items-center">
-    <div class="new-date__separator"></div>
-    <div class="new-date__value fw-light">{{ include.new.publish-date }}</div>
+<a href="{{ include.new.url }}" class="news-block__card p-3 w-100 fs-3 mb-3">
+  <div class="mb-2">{{ include.new.new-title }}</div>
+  <div class="row w-100">
+    <div class="col-sm-4">
+      <div class="new-image__container">
+        <img class="mt-2" src="{{ include.new.image }}">
+      </div>
+    </div>
+    <div class="col opacity-75 new-preview__description">
+      <div class="fs-5 text-secondary">{{ include.new.type}}</div>
+      <div class="fs-5 text-secondary">{{ include.new.author}}</div>
+      <div class="fs-5 text-secondary">{{ include.new.publish-date }}</div>
+    </div>  
   </div>
 </a>

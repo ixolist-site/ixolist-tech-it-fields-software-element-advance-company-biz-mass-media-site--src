@@ -296,6 +296,12 @@ html, body {
   width: 100%;
 }
 
+@media screen and (max-width: 576px) { 
+  .new-preview__description {
+    margin-top: 12px !important;
+  }
+}
+
 @media screen and (max-width: 768px) { 
   .tags-container-en--mobile {
     display: flex;
@@ -361,4 +367,23 @@ html, body {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   opacity: .6
+}
+
+.new-image__container {}
+
+.new-image__container > img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.tag-badge {
+  border: 1px dashed #1976D2;
+  padding: 1px 4px;
+  line-height: 30px;
+  transition: .3s;
+}
+
+.tag-badge:hover {
+  opacity: .5;
+  transition: .3s;
 }
