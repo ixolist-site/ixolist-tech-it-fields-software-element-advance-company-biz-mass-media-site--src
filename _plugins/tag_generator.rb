@@ -23,6 +23,7 @@ module Jekyll
       self.data['tag'] = tag_name["name"].to_s
       # Удалите следующую строку, если у вас нет отдельного поля 'lang' для тегов
       self.data['lang'] = tag_name['lang'].to_s
+      self.data['ref'] = '/tags/' + tag_name['refName'].to_s
       self.data['title'] = 'Tags - ' + tag_name['name'].to_s
     end
   end

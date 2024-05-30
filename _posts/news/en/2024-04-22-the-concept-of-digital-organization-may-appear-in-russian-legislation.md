@@ -11,44 +11,61 @@ ref: /2024-04-22-v-rossijskom-zakonodatelstve-mozhet-poiavitsia-poniatie-cifrova
 
 tags: 
   - name: "Bitcoin"
+    refName: "Биткоин"
     lang: en
   - name: "Ethereum"
+    refName: "Эфириум"
     lang: en
   - name: "Blockchain"
+    refName: "Блокчейн"
     lang: en
   - name: "Cryptocurrency"
+    refName: "Криптовалюта"
     lang: en
   - name: "Decentralization"
+    refName: "Децентрализация"
     lang: en
   - name: "Smart-Contracts"
+    refName: "Смарт-контракты"
     lang: en
   - name: "NFT"
     lang: en
   - name: "Altcoin"
+    refName: "Альткоин"
     lang: en
   - name: "Mining"
+    refName: "Майнинг"
     lang: en
   - name: "Wallet"
+    refName: "Кошелек"
     lang: en
   - name: "Token"
+    refName: "Токен"
     lang: en
   - name: "Digital-Asset"
+    refName: "Цифровой актив"
     lang: en
   - name: "ICO"
     lang: en
   - name: "DeFi"
     lang: en
   - name: "Proof-of-Work"
+    refName: "Подтверждение работы"
     lang: en
   - name: "Proof-of-Stake"
+    refName: "Подтверждение доли"
     lang: en
   - name: "Consensus"
+    refName: "Консенсус"
     lang: en
   - name: "Hard-Fork"
+    refName: "Хардфорк"
     lang: en
   - name: "Soft-Fork"
+    refName: "Софтфорк"
     lang: en
   - name: "Hashing"
+    refName: "Хеширование"
     lang: en
 
 sources:
