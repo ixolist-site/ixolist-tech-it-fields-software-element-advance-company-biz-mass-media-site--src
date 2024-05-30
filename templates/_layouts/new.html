@@ -105,14 +105,14 @@
             {% if page.lang == "en" %}
               {% for tag_hash in page.tags %}
                 {% assign tag_name = tag_hash["name"] %}
-                <a href="/tags-cloud/{{tag_name}}" target="_blank">
+                <a href="/tags/{{tag_name}}" target="_blank">
                   <div style="background: #1976D2;" class="badge badge-pill badge-primary" >{{tag_name}}</div>
                 </a>
               {% endfor %}
             {% else %}
                {% for tag_hash in page.tags %}
                 {% assign tag_name = tag_hash["name"] %}
-                <a href="./tags-cloud/{{tag_name}}" target="_blank">
+                <a href="./tags/{{tag_name}}" target="_blank">
                   <div style="background: #1976D2;" class="badge badge-pill badge-primary" >{{tag_name}}</div>
                 </a>
               {% endfor %}
