@@ -20,55 +20,55 @@ ref: /2024-04-22-the-concept-of-digital-organization-may-appear-in-russian-legis
 tags:
   - name: "Биткоин"
     refName: "Bitcoin"
-    lang: en
+    lang: ru
   - name: "Эфириум"
     refName: "Ethereum"
-    lang: en
+    lang: ru
   - name: "Блокчейн"
     refName: "Blockchain"
-    lang: en
+    lang: ru
   - name: "Криптовалюта"
     refName: "Cryptocurrency"
-    lang: en
+    lang: ru
   - name: "Децентрализация"
     refName: "Decentralization"
-    lang: en
+    lang: ru
   - name: "Смарт-контракты"
     refName: "Smart-Contracts"
-    lang: en
+    lang: ru
   - name: "Альткоин"
     refName: "Altcoin"
-    lang: en
+    lang: ru
   - name: "Майнинг"
     refName: "Mining"
-    lang: en
+    lang: ru
   - name: "Кошелек"
     refName: "Wallet"
-    lang: en
+    lang: ru
   - name: "Токен"
     refName: "Token"
-    lang: en
+    lang: ru
   - name: "Цифровой актив"
     refName: "Digital-Asset"
-    lang: en
+    lang: ru
   - name: "Подтверждение работы"
     refName: "Proof-of-Work"
-    lang: en
+    lang: ru
   - name: "Подтверждение доли"
     refName: "Proof-of-Stake"
-    lang: en
+    lang: ru
   - name: "Консенсус"
     refName: "Consensus"
-    lang: en
+    lang: ru
   - name: "Хардфорк"
     refName: "Hard-Fork"
-    lang: en
+    lang: ru
   - name: "Софтфорк"
     refName: "Soft-Fork"
-    lang: en
+    lang: ru
   - name: "Хеширование"
     refName: "Hashing"
-    lang: en
+    lang: ru
 
 sources:
   - name: RG
