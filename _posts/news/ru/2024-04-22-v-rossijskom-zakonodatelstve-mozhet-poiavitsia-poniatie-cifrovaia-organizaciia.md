@@ -15,6 +15,8 @@ new-text: "В ходе конференции финансового клуба 
 Этот шаг, подчеркнул Чебесков, может серьезно упростить ведение бизнеса."
 publish-date: 2024-04-22
 
+ref: /2024-04-22-the-concept-of-digital-organization-may-appear-in-russian-legislation
+
 tags:
   - name: "Биткоин"
     lang: ru
